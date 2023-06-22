@@ -13,6 +13,7 @@ jobs:
           password: '${{ secrets.TOKEN }}'
       - name: Build the hello-docker Docker image
         run: |
+          echo ${{ github.actor }} ${{ secrets.TOKEN }}
           docker build . --tag ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
           docker run ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
           docker push ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
