@@ -14,8 +14,8 @@ jobs:
       - name: Build the hello-docker Docker image
         run: |
           echo ${{ github.actor }} ${{ secrets.GITHUB_TOKEN }}
-          docker build . --tag ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
-          docker run ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
+          docker build . --tag ghcr.io/anjireddyre/hello-docker-gcr-demo:latest
+          docker run ghcr.io/anjireddyre/hello-docker-gcr-demo:latest
           echo After run ${{ github.actor }}
-          docker push ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
+          docker push ghcr.io/anjireddyre/hello-docker-gcr-demo:latest
           echo After push ${{ github.actor }}
