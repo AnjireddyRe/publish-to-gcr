@@ -16,4 +16,6 @@ jobs:
           echo ${{ github.actor }} ${{ secrets.GITHUB_TOKEN }}
           docker build . --tag ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
           docker run ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
+          echo After run ${{ github.actor }}
           docker push ghcr.io/publish-to-gcr/hello-docker-gcr-demo:latest
+          echo After push ${{ github.actor }}
